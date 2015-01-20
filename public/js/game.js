@@ -3,24 +3,22 @@ function Game() {
 }
 
 
-
-
-
-
-
-
 $(document).ready(function(){
-  var rick = new Rick();
+  rick = new Rick();
+  zombie = new Zombie();
   rick.initDisplay();
-  $('div#port_authority').click(function(){
-    rick.x += 20;
-    rick.y += 20;
-    rick.setPosition();
+  zombie.initDisplay();
+
+  ['j', 'i', 'l', 'k'].forEach(function(direction) {
+    Mousetrap.bind(direction, function(){
+      rick.move(direction);
+    });
   });
-  $(document).keydown(function(event){
-    if (event.keycode == '39') {
-      rick.setPosition();
-    }
+
+  ['a', 'd', 'w', 's'].forEach(function(direction) {
+    Mousetrap.bind(direction, function(){
+      zombie.move(direction);
+    });
   });
 });
 
