@@ -1,5 +1,24 @@
 #arena {
-  width: 600;
-  height: 600;
-  border: 1px solid #000;
+  width: 1500;
+  height: 850;
+  border: 6px solid #000;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.character {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+}
+
+.rick {
+  background-image: url("../image/images-1.jpg");
+}
+
+.zombie {
+  background-image: url("../image/zombie-gif.gif");
 }

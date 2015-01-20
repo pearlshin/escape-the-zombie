@@ -1,5 +1,14 @@
+
+
+
+
+
+
+
+
+
 $(document).ready(function(){
-  $('div#arena').click(function(){
-    $(this).css('background-color', 'blue');
+  $('div#arena').on('click', function(){
+    $(this).toggleClass('grey');
   })
 });
